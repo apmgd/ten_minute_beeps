@@ -1,11 +1,10 @@
-# import required module
 import os
-import time
+import time as t
 
 # I use the beep here: https://freesound.org/people/Pablobd/sounds/492481/
 file = 'PASTE AUDIO FILE PATH HERE'
 while True:  # Infinite loop
-    print('Beep beep!')
+    print('Beep beep! ' + t.strftime("%H:%M", t.localtime()))
     os.system("afplay " + file)
 
-    time.sleep(600)  # Wait 600s (10 min) before re-entering the cycle
+    t.sleep(600)  # Wait 600s (10 min) before re-entering the cycle
